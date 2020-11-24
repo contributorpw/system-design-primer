@@ -1,97 +1,33 @@
-[English](README.md) | [日本語](README-ja.md) | **[Русский](README-ru.md)** | [简体中文](README-zh-Hans.md) | [繁體中文](README-zh-TW.md) <!-- l10n:select -->
-<!-- l10n:p
-# The System Design Primer
+*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) ∙ **[Русский](README-ru.md)** | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [Español](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [ภาษาไทย](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Türkçe](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [tiếng Việt](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Français](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
 
-<p align="center">
-  <img src="http://i.imgur.com/jj3A5N8.png"/>
-  <br/>
-</p>
-l10n:p -->
+**Помогите [перевести] (TRANSLATIONS.md) это руководство!**
 
 # Пособие по проектированию систем
 
-<!-- l10n:ignore start -->
-![l10n-sync-ru](https://github.com/voitau/system-design-primer/workflows/l10n-sync-ru/badge.svg)
-> ## Contributing: Russian translation
->
-> **WARNING**: the document is currently being translated.
->
-> Thank you for your interest in contributing to Russian translation! If you want to contribute, please do the following:
->
-> * choose a task for a section which you want to translate in the [Project](https://github.com/voitau/system-design-primer/projects/4)
-> * assign it to yourself and move it to `In progress`
-> * text in comments is copied from original and is kept in sync. you can use it as a source for translation, but **do not change it**
-> * make PR to this fork. When translation is complete, all changes will go into one PR to main repository
-> * **do not change Header names and internal links, keep them original**. To avoid broken links, they all will be updated after document is completely translated before final PR to main repository
->
-<!-- l10n:ignore end -->
-
 <p align="center">
-  <img src="http://i.imgur.com/jj3A5N8.png"/>
+  <img src="images/jj3A5N8.png">
   <br/>
 </p>
-
-<!-- l10n:p
-## Motivation
-
-> Learn how to design large-scale systems.
->
-> Prep for the system design interview.
-l10n:p -->
 
 ## Мотивация
 
 > Узнайте, как проектировать крупномасштабные системы.
 >
-> Подготовьтесь к собеседованию по проектированию системы.
-
-<!-- l10n:p
-### Learn how to design large-scale systems
-
-Learning how to design scalable systems will help you become a better engineer.
-
-System design is a broad topic.  There is a **vast amount of resources scattered throughout the web** on system design principles.
-
-This repo is an **organized collection** of resources to help you learn how to build systems at scale.
-l10n:p -->
+> Подготовьтесь к собеседованию по проектированию систем.
 
 ### Научитесь проектировать крупномасштабные системы
 
-Умение проектировать масштабируемые системы поможет вам стать лучшим инженером.
+Умение проектировать масштабируемые системы поможет вам стать более подготовленным инженером.
 
 Проектирование систем - это широкая тема. В сети есть **огромное количество ресурсов** по принципам проектирования систем.
 
 Этот репозиторий представляет собой **организованную коллекцию** ресурсов, которые помогут вам научиться создавать системы на большом масштабе.
-
-<!-- l10n:p
-### Learn from the open source community
-
-This is a continually updated, open source project.
-
-[Contributions](#contributing) are welcome!
-l10n:p -->
 
 ### Учитесь у сообщества по разработке ПО с открытым исходным кодом
 
 Это постоянно обновляемый проект с открытым исходным кодом.
 
 [Contributions](#contributing) очень приветствуются!
-
-<!-- l10n:p
-### Prep for the system design interview
-
-In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.
-
-**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.
-
-Additional topics for interview prep:
-
-* [Study guide](#study-guide)
-* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
-* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
-* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
-* [Additional system design interview questions](#additional-system-design-interview-questions)
-l10n:p -->
 
 ### Подготовка к собеседованию по проектированию системы
 
@@ -101,90 +37,41 @@ l10n:p -->
 
 Дополнительные темы для подготовки к собеседованию:
 
-* [Study guide](#study-guide)
-* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
-* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
-* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
-* [Additional system design interview questions](#additional-system-design-interview-questions)
-
-<!-- l10n:p
-## Anki flashcards
-
-<p align="center">
-  <img src="http://i.imgur.com/zdCAkB3.png"/>
-  <br/>
-</p>
-
-The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
-
-* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
-
-Great for use while on-the-go.
-l10n:p -->
+* [Методическое пособие](#Методическое-пособие)
+* [Как подойти к вопросу собеседования по проектированию систем](#how-to-approach-a-system-design-interview-question)
+* [Вопросы на собеседовании по системному проектированию **с решениями**](#system-design-interview-questions-with-solutions)
+* [Вопросы для собеседования по объектно-ориентированному проектированию **с решениями**](#object-oriented-design-interview-questions-with-solutions)
+* [Дополнительные вопросы на собеседовании по проектированию систем](#additional-system-design-interview-questions)
 
 ## Anki flashcards
 
 <p align="center">
-  <img src="http://i.imgur.com/zdCAkB3.png"/>
+  <img src="images/zdCAkB3.png">
   <br/>
-</p>
+</p>>
 
 Предоставленные [карточки Anki](https://apps.ankiweb.net/) могут быть использованы для повторения и запоминания ключевых концепций проектирования систем.
 
-* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
+* Карточки с теорией по проектированию систем [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)
+* Карточки с упражнениями по проектированию систем [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)
+* Карточки с упражнениями по объектно-ориентированному проектированию [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)
 
 Отлично подходят для использования на ходу.
 
-<!-- l10n:p
-### Coding Resource: Interactive Coding Challenges
-
-Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
-
-<p align="center">
-  <img src="http://i.imgur.com/b4YtAEN.png"/>
-  <br/>
-</p>
-
-Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
-
-* [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
-l10n:p -->
-
-### Coding Resource: Interactive Coding Challenges
+### Ресурс для практики кодирования: интерактивные задания
 
 Ищете ресурсы для подготовки к [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
 
 <p align="center">
-  <img src="http://i.imgur.com/b4YtAEN.png"/>
+  <img src="images/b4YtAEN.png">
   <br/>
 </p>
 
 Посмотрите другой репозиторий [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), который тоже содержит колоду карт Anki:
 
-* [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
+* Карточки "Примеры кодирования" [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
 
-<!-- l10n:p
-## Contributing
-
-> Learn from the community.
-
-Feel free to submit pull requests to help:
-
-* Fix errors
-* Improve sections
-* Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
-
-Content that needs some polishing is placed [under development](#under-development).
-
-Review the [Contributing Guidelines](CONTRIBUTING.md).
-l10n:p -->
-
-## Contributing
+## Поддержка
 
 > Учитесь у сообщества.
 
@@ -197,115 +84,20 @@ l10n:p -->
 
 Контент, который нуждается в некоторой полировке, помещается в раздел [В разработке](#under-development).
 
-Ознакомьтесь с [Принципами Содействия](CONTRIBUTING.md).
+Ознакомьтесь с [Принципами поддержки](CONTRIBUTING.md).
 
-<!-- l10n:p
-## Index of system design topics
+## Указатель тем по проектированию систем
 
-> Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.
->
-> Each section contains links to more in-depth resources.
-
-<p align="center">
-  <img src="http://i.imgur.com/jrUBAF7.png"/>
-  <br/>
-</p>
-
-* [System design topics: start here](#system-design-topics-start-here)
-    * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
-    * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
-    * [Next steps](#next-steps)
-* [Performance vs scalability](#performance-vs-scalability)
-* [Latency vs throughput](#latency-vs-throughput)
-* [Availability vs consistency](#availability-vs-consistency)
-    * [CAP theorem](#cap-theorem)
-        * [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)
-        * [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)
-* [Consistency patterns](#consistency-patterns)
-    * [Weak consistency](#weak-consistency)
-    * [Eventual consistency](#eventual-consistency)
-    * [Strong consistency](#strong-consistency)
-* [Availability patterns](#availability-patterns)
-    * [Fail-over](#fail-over)
-    * [Replication](#replication)
-    * [Availability in numbers](#availability-in-numbers)
-* [Domain name system](#domain-name-system)
-* [Content delivery network](#content-delivery-network)
-    * [Push CDNs](#push-cdns)
-    * [Pull CDNs](#pull-cdns)
-* [Load balancer](#load-balancer)
-    * [Active-passive](#active-passive)
-    * [Active-active](#active-active)
-    * [Layer 4 load balancing](#layer-4-load-balancing)
-    * [Layer 7 load balancing](#layer-7-load-balancing)
-    * [Horizontal scaling](#horizontal-scaling)
-* [Reverse proxy (web server)](#reverse-proxy-web-server)
-    * [Load balancer vs reverse proxy](#load-balancer-vs-reverse-proxy)
-* [Application layer](#application-layer)
-    * [Microservices](#microservices)
-    * [Service discovery](#service-discovery)
-* [Database](#database)
-    * [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
-        * [Master-slave replication](#master-slave-replication)
-        * [Master-master replication](#master-master-replication)
-        * [Federation](#federation)
-        * [Sharding](#sharding)
-        * [Denormalization](#denormalization)
-        * [SQL tuning](#sql-tuning)
-    * [NoSQL](#nosql)
-        * [Key-value store](#key-value-store)
-        * [Document store](#document-store)
-        * [Wide column store](#wide-column-store)
-        * [Graph Database](#graph-database)
-    * [SQL or NoSQL](#sql-or-nosql)
-* [Cache](#cache)
-    * [Client caching](#client-caching)
-    * [CDN caching](#cdn-caching)
-    * [Web server caching](#web-server-caching)
-    * [Database caching](#database-caching)
-    * [Application caching](#application-caching)
-    * [Caching at the database query level](#caching-at-the-database-query-level)
-    * [Caching at the object level](#caching-at-the-object-level)
-    * [When to update the cache](#when-to-update-the-cache)
-        * [Cache-aside](#cache-aside)
-        * [Write-through](#write-through)
-        * [Write-behind (write-back)](#write-behind-write-back)
-        * [Refresh-ahead](#refresh-ahead)
-* [Asynchronism](#asynchronism)
-    * [Message queues](#message-queues)
-    * [Task queues](#task-queues)
-    * [Back pressure](#back-pressure)
-* [Communication](#communication)
-    * [Transmission control protocol (TCP)](#transmission-control-protocol-tcp)
-    * [User datagram protocol (UDP)](#user-datagram-protocol-udp)
-    * [Remote procedure call (RPC)](#remote-procedure-call-rpc)
-    * [Representational state transfer (REST)](#representational-state-transfer-rest)
-* [Security](#security)
-* [Appendix](#appendix)
-    * [Powers of two table](#powers-of-two-table)
-    * [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
-    * [Additional system design interview questions](#additional-system-design-interview-questions)
-    * [Real world architectures](#real-world-architectures)
-    * [Company architectures](#company-architectures)
-    * [Company engineering blogs](#company-engineering-blogs)
-* [Under development](#under-development)
-* [Credits](#credits)
-* [Contact info](#contact-info)
-* [License](#license)
-l10n:p -->
-
-## Index of system design topics
-
-> Обобщение различных тем по проектирования систем, включая преимущества и недостатки.  **Любое решение требует уступок**.
+> Обобщение различных тем по проектирования систем, включая преимущества и недостатки. **Любое решение требует уступок**.
 >
 > Каждый раздел содержит ссылки на более подробное описание.
 
 <p align="center">
-  <img src="http://i.imgur.com/jrUBAF7.png"/>
+  <img src="images/jrUBAF7.png">
   <br/>
-</p>
+</p
 
-* [System design topics: start here](#system-design-topics-start-here)
+* [Темы по проектированию систем: начало](#system-design-topics-start-here)
     * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
     * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
     * [Next steps](#next-steps)
@@ -387,49 +179,11 @@ l10n:p -->
 * [Contact info](#contact-info)
 * [License](#license)
 
-<!-- l10n:p
-## Study guide
-
-> Suggested topics to review based on your interview timeline (short, medium, long).
-
-![Imgur](http://i.imgur.com/OfVllex.png)
-
-**Q: For interviews, do I need to know everything here?**
-
-**A: No, you don't need to know everything here to prepare for the interview**.
-
-What you are asked in an interview depends on variables such as:
-
-* How much experience you have
-* What your technical background is
-* What positions you are interviewing for
-* Which companies you are interviewing with
-* Luck
-
-More experienced candidates are generally expected to know more about system design.  Architects or team leads might be expected to know more than individual contributors.  Top tech companies are likely to have one or more design interview rounds.
-
-Start broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.
-
-* **Short timeline** - Aim for **breadth** with system design topics.  Practice by solving **some** interview questions.
-* **Medium timeline** - Aim for **breadth** and **some depth** with system design topics.  Practice by solving **many** interview questions.
-* **Long timeline** - Aim for **breadth** and **more depth** with system design topics.  Practice by solving **most** interview questions.
-
-| | Short | Medium | Long |
-|---|---|---|---|
-| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |
-| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |
-| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
-| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
-| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
-| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
-| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
-l10n:p -->
-
-## Study guide
+## Методическое пособие
 
 > Предлагаемые темы для повторения в зависимости от того, сколько у вас есть времени для подготовки к интервью (мало, средне, много)
 
-![Imgur](http://i.imgur.com/OfVllex.png)
+![Imgur](images/OfVllex.png
 
 **Вопрос: Надо ли мне знать все из этого документа для интервью?**
 
@@ -437,7 +191,8 @@ l10n:p -->
 
 То, что вас будут спрашивать на интервью, зависит от:
 
-* Вашего опыта - сколько времени и чем вы занимались
+* Ваших навыков - сколько времени и чем вы занимались
+* Каков ваш технический опыт
 * Должности, на которую вы собеседуетесь
 * Компания, в которую вы собеседуетесь
 * Удача
@@ -447,14 +202,14 @@ l10n:p -->
 Начинайте широко, и углубляейтесь в некоторые области. Это поможет узнать больше о различных темах по проектированию систем. Корректируйте ваш план в зависомости от того, сколько у вас есть времени, какой у вас опыт, на какую должность вы собеседуетесь и в какие компании.
 
 * **Короткий срок** - настраиватесь на **широту** покрытия тем. Тренируйтесь отвечать на **некоторые** вопросы.
-* **Средний срок** - настраиватесь на **широту** и **немного глубины** покрытия тем. Тренируйтесь отвечать на **многие** вопросы.
-* **Длительный срок** - настраиватесь на **широту** и **больше глубины** покрытия тем. Тренируйтесь отвечать на **большинство** вопросов.
+* **Средний срок** - настраиватесь на **широту** и **частичную глубину** покрытия тем. Тренируйтесь отвечать на **основную часть** вопросов.
+* **Длительный срок** - настраиватесь на **широту** и **общирную глубину** покрытия тем. Тренируйтесь отвечать на **большинство** вопросов.
 
 | | Малый срок | Средний срок | Длительный срок |
 |---|---|---|---|
-| Читайте [System design topics](#index-of-system-design-topics), чтобы получить общее понимание, как работают системы | :+1: | :+1: | :+1: |
-| Почитайте несколько статей из блогов компаний, в который вы собеседуетесь [Company engineering blogs](#company-engineering-blogs)  | :+1: | :+1: | :+1: |
-| Посмотрите несколько [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
+| Читайте [Указатель тем по проектированию систем](#Указатель-тем-по-проектированию-систем), чтобы получить общее понимание, как работают системы | :+1: | :+1: | :+1: |
+| Почитайте несколько статей из блогов компаний, в которых вы собеседуетесь [Блоги инженерных компании](#Блоги-инженерных-компании)  | :+1: | :+1: | :+1: |
+| Посмотрите несколько примеров [Архитектур из реального мира](#Архитектуры-из-реального-мира) | :+1: | :+1: | :+1: |
 | [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
 | [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Немного | Много | Большинство |
 | [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Немного | Много | Большинство |
@@ -470,7 +225,7 @@ The system design interview is an **open-ended conversation**.  You are expected
 You can use the following steps to guide the discussion.  To help solidify this process, work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section using the following steps.
 l10n:p -->
 
-## How to approach a system design interview question
+## Как подойти к вопросу собеседования по проектированию систем
 
 > Как отвечать на вопросы на интерьвю по проектированию систем
 
@@ -631,7 +386,7 @@ l10n:p -->
 | Add a system design question | [Contribute](#contributing) |
 l10n:p -->
 
-## System design interview questions with solutions
+## Вопросы на собеседовании по системному проектированию **с решениями**
 
 > Распространенные задачи с обсуждением, кодом и диаграммами.
 >
@@ -782,7 +537,7 @@ l10n:p -->
 | Add an object-oriented design question | [Contribute](#contributing) |
 l10n:p -->
 
-## Object-oriented design interview questions with solutions
+## Вопросы для собеседования по объектно-ориентированному дизайну **с решениями**
 
 > Распространенные задачи с обсуждением, кодом и диаграммами.
 >
@@ -809,7 +564,7 @@ New to system design?
 First, you'll need a basic understanding of common principles, learning about what they are, how they are used, and their pros and cons.
 l10n:p -->
 
-## System design topics: start here
+## Темы по проектированию систем: начало
 
 Только начинайте изучать проектирование систем?
 
@@ -3012,7 +2767,7 @@ l10n:p -->
 | Add a system design question | [Contribute](#contributing) |
 l10n:p -->
 
-### Additional system design interview questions
+### Дополнительные вопросы на собеседовании по проектированию систем
 
 > Распространенные задачи на интервью по проектированию систем со ссылками на решение.
 
@@ -3084,7 +2839,7 @@ l10n:p -->
 | | Add an architecture | [Contribute](#contributing) |
 l10n:p -->
 
-### Real world architectures
+### Архитектуры из реального мира
 
 > Статья о том, как спроектированы действующие системы.
 
@@ -3231,7 +2986,7 @@ l10n:p -->
 * [Zynga Engineering Blog](https://www.zynga.com/blogs/engineering)
 l10n:p -->
 
-### Company engineering blogs
+### Блоги инженерных компании
 
 > Вопросы могут быть связаны с архитектурой компаний, в которые вы собеседуетесь.
 
@@ -3301,7 +3056,7 @@ Interested in adding a section or helping complete one in-progress?  [Contribute
 * [Contribute](#contributing)
 l10n:p -->
 
-## Under development
+## В разработке
 
 Заинтересованы в добавлении раздела или в завершении того, что уже в процессе? [Содействуйте!](#contributing)!
 
